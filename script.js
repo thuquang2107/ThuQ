@@ -61,11 +61,6 @@ document.addEventListener("click", function (event) {
     }, "-=0.5");
 });
 
-function handleEvent(event) {
-    // Prevent the default touch behavior on tablets
-    event.preventDefault();
-    createSticker(event);
-}
 
 document.addEventListener("click", handleEvent);
 
