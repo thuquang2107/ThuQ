@@ -1,0 +1,351 @@
+@import url('phone.css');
+@import url('tablet.css');
+@import url('work.css');
+@import url('miniwork.css');
+
+html {
+    cursor: url('assets_1/cursor2.png'), auto;
+    scroll-behavior: smooth;
+
+}
+a{
+    cursor: url('assets_1/cursor4.png'), auto;
+}
+/*****navAnimate***/
+.animateNav {
+    animation: fadeInDown 1s ease-out;
+}
+/*****navText***/
+.animateHomeContainer {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+:root{
+    background-color: --var(#FFF9F0);
+    primary-color-pink: --var(#F299CE);
+    primary-color-purple: --var(#5E34FE);
+    primary-color-yellow: --var(#FCEC59);
+    big-text:--var( 'ClashDisplay-Medium');
+    para-text: --var('ClashGrotesk-Variable');
+}
+.angel_background{
+    position: absolute;
+    width:100vw;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin-top:3.5vw;
+    opacity:0.85;
+}
+.angel_background .bg1{
+    float: right;
+    width: 40vw;;
+    opacity:0.8;
+}
+#angel_bg2{
+    width:12vw;
+    bottom: -5vw;    
+    transform: translateX(-30%) rotate(30deg);
+}
+#mummy_bg{
+    width: 25vw;
+    margin-right: -5vw;;
+    margin-top: 15vh;
+}
+#mummy_bg2{
+    transform: rotate(0deg);
+    width:10vw;
+    top:110vh; 
+}
+#last_bg{
+    width: 30vw;
+    transform: rotate(20deg);
+    margin-right: -5vw;;
+    margin-top: 15vh;
+}
+#last_bg2{
+    width: 40vw;
+    left:-5vw;
+    transform: rotate(-20deg);
+}
+#icon_bg{
+    float: right;
+    width: 40vw;;
+    opacity:0.8;
+    margin-right:-10vw;
+    margin-top:5vw;
+    transform: rotate(20deg);
+}
+#icon_bg2{
+    transform: rotate(-20deg);
+    width:40vw;
+    top:110vh; 
+    margin-left:-10vw;
+}
+.angel_background .bg2{
+    position: absolute;
+}
+.angel_container{
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    width:100vw;
+    position: relative;
+
+}
+.angel_body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding: 0 14.5vw;
+    margin-top:8vw;
+}
+.title_miniwork{  /*<p class="title_miniwork"> The Angel</p>*/
+    font-family: 'ClashDisplay-Medium';
+    font-size: 4.5vw;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+} 
+
+ .explain_miniwork{ /* body */
+    text-indent: 1vw;
+    font-size: 1.6vw;
+    font-family: 'ClashGrotesk-Variable';
+    margin-top:1vw;
+}
+.angel_work{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    z-index:10;
+    margin-top:5vw;
+}
+
+.slider{
+    justify-content: center;
+    height: 32.5vw;
+    width: 75vw;
+    margin:auto;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.slide_track{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+    width:calc(35vw * 10);
+    /*slide tracj width= total number of slide(in this case is 9x9=18) 
+    * individual slide width in this case use px*/
+    animation: scroll  15s linear infinite;
+    
+}
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-32.5vw *5));
+    }
+}
+.slider:hover .slide_track {
+    animation-play-state: paused;
+}
+.slide{
+    height: 20vh;
+    width: 35vw;
+    display: flex;
+    align-items: center;
+    padding: 1.5vw;
+    perspective: 100px;
+    z-index: 10;
+    filter:drop-shadow(0 0 4px rgba(0, 0, 0, 0.497));
+    /*to make the image move on the Z axis 
+    we need to add to its container(.slide) 
+    a perpestive property*/
+}
+.slide img {
+    width: 100%;
+    object-fit:contain;
+    transition: transform 0.5s;
+}
+
+.slide img:hover{
+    transform: translateZ(0.6vw);
+}
+iframe{
+    width:75vw;
+    height:50vw;
+    filter:drop-shadow(0 0 4px rgba(0, 0, 0, 0.497));
+}
+.below_img{
+    width:75vw;
+    height:50vw;
+    filter:drop-shadow(0 0 4px rgba(0, 0, 0, 0.497));
+}
+.up_button{
+    float: right;
+    height: 5vw;
+    width: 5vw;
+    margin-top:5vw;
+    right: 0;
+    transform: rotate(-90deg);
+    margin-right: 5vw;
+    animation: moveup 0.8s ease-in-out infinite;
+    transition: 1s ease-in-out;
+}
+
+@keyframes moveup {
+    0%{
+        transform: translate(0,.25vw) rotate(-90deg);
+    }
+    50%{
+        transform: translate(0,0vw) rotate(-90deg);
+    }
+    100%{
+        transform: translate(0,.25vw) rotate(-90deg);
+    }
+}
+.back_button{
+    position: absolute;
+    height: 5vw;
+    width: 5vw;
+    margin-top:3.5vw;
+    margin-left:5vw;
+    z-index:30;
+    animation: moveback 0.8s ease-in-out infinite;
+}
+@keyframes moveback {
+    0%{
+        transform: translate(.25vw,0vw) ;
+    }
+    50%{
+        transform: translate(0,0vw) ;
+    }
+    100%{
+        transform: translate(.25vw,0vw) ;
+    }
+}
+    
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .angel_body{
+        padding: 0 7.5vw;
+        margin-top:8vw;
+    }
+    .explain_miniwork{ /* body */
+        font-size: 3.2vw;
+    
+    }
+    .title_miniwork{  /*<p class="title_miniwork"> The Angel</p>*/
+        font-size: 8.5vw;
+
+    } 
+    .slider, .slide_track {
+        height: 45vh;
+    }
+    .slider{
+        width: 85vw;
+    }
+    .slide{
+        width: 45vw;
+        height: 40vw;;
+    }
+
+    .slide_track{
+        width:calc(40.5vw * 10);
+        animation: scroll  15s linear infinite;
+    }
+
+    .slide img {
+        width: 40.5vw;
+    }
+
+    iframe{
+        margin-top: 5vw;;
+        width:85vw;
+        height:60vw;
+    }
+    .below_img{
+        margin-top: 5vw;;
+        width:85vw;
+        height:60vw;
+    }
+}
+@media screen and (max-width: 767.5px) {
+    .angel_body{
+        padding: 0 7.5vw;
+        margin-top:8vw;
+    }
+    .explain_miniwork{ /* body */
+        font-size: 4.2vw;
+    
+    }
+    .title_miniwork{  /*<p class="title_miniwork"> The Angel</p>*/
+        font-size: 9.5vw;
+
+    } 
+    .slider, .slide_track {
+        height: 50vh;
+    }
+    .slider{
+        width: 85vw;
+    }
+    .slide{
+        width: 60vw;
+        height: auto;;
+    }
+
+    .slide_track{
+        width:calc(50.5vw * 10);
+        animation: scroll  15s linear infinite;
+    }
+
+    .slide img {
+        width: 55.5vw;
+    }
+
+    iframe{
+        margin-top: -5vw;;
+        width:85vw;
+        height:60vw;
+    }
+    .below_img{
+        margin-top: -5vw;;
+        width:85vw;
+        height:60vw;
+    }
+
+
+}
+

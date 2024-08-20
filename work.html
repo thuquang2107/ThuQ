@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2_Portfolio_ThuQuang</title>
+    <link rel="stylesheet" href="style.css">    
+    <!-- <link rel="stylesheet" href="phone.css"> 
+    <link rel="stylesheet" href="tablet.css">  -->
+    <link rel="stylesheet"  href="work.css">
+
+</head>
+<body>
+    <nav >
+        <div>
+            <a href="index.html"><img id="logo" src="./assets_1/logo_nav.png"> </a>
+        </div>
+        <ul class="navigation_menu">
+            <li>
+                <a href="index.html">home</a>
+            </li>
+            <li>
+                <a href="about.html">about</a>
+            </li>
+            <li class="underline_work">
+                <a href="work.html">work</a>
+            </li>
+        </ul>
+        <div class="contact_button"><a href="contact.html">Contact</a></div>
+        <div id="hamburger_menu" onclick="popup_navmenu()"><img src="assets_1/hamburgermenu.png"></div>
+
+    </nav>
+</div>
+    <div class="overlay" id="responsive_menu">
+        <div class="closebtn" onclick="close_navmenu()"><img src="assets_1/quit_menu.png"></div>
+        <div class="overlay-content">
+            <li><a href="index.html">home</a> </li>
+            <li><a href="about.html">about</a> </li>
+            <li><a href="work.html">work</a>  </li>
+            <li><a href="contact.html">contact</a>  </li>
+        </div>
+    </div>
+
+    <script>
+        function popup_navmenu() {
+            document.getElementById("responsive_menu").style.width = "75%";
+        }
+
+        function close_navmenu() {
+            document.getElementById("responsive_menu").style.width = "0%";
+        }
+    </script>
+ 
+<div class="work_p1_container">
+    <div class="work_subheading"> explore  my  works</div>
+    <div class="work_landing">
+        <div class="work_text_section">
+            <p> Being a digital media student opens up me chances to 
+            gain fresh perspectives through various software applications. 
+            With each projects I work on, viewers are presented with designs
+            that are visually compelling, creatively innovative, 
+             and rich in meaning, ensuring that each piece not only captures attention 
+             but also offers a thoughtful and impactful experience to viewers. </p>
+        </div> 
+        <img src="assets_1/folderwork.png">
+    </div>
+</div>
+
+
+
+
+<div id="back" class="work_page">
+       <div class="work_button">
+        <img id="left" class="button_setup" src="assets_1/left-button.png">
+        <img id="right" class="button_setup" src="assets_1/right-button.png">
+        </div>
+
+    <div id="work_list_setup" style="overflow-x: hidden;">
+       <div class="work_list">
+        <ul class="work_list_inner">
+            <li class="work_card wc_1">
+                <a href="angel.html">
+                    <div class="work_content">
+                        <div class="work_card_img">
+                            <img src="project_img/angel_cover_work.png">
+                        </div>
+                        <div class="work_content_cap">
+                        <h3>The Angel</h3>
+                        <p>2024</p>
+                        <p>#poem_web based</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <li class="work_card wc_2">
+                <a href="lastday.html">
+                <div class="work_content">
+                    <div class="work_card_img">
+                        <img src="project_img/lastday_cover_work.png">
+                    </div>
+                    <div class="work_content_cap">
+                        <h3>The Last Day on Earth</h3>
+                        <p> 2024</p>
+                        <p>#web_design</p>
+                    </div>
+                </div>
+                </a>
+            </li>
+
+            <li class="work_card wc_1">
+                <a href="mummy.html" style="transition: 1.5s ease;">
+                <div class="work_content">
+                    <div class="work_card_img">
+                        <img src="project_img/mummy_cover_work.png">
+                    </div>
+                    <div class="work_content_cap">
+                        <h3>A Tale of <br>Mummifi-cation</h3>
+                        <p> 2024</p>
+                        <p>#interactive_inforgraphic</p>
+                    </div>
+                </div>
+                </a>
+            </li>
+
+        
+            <li class="work_card wc_2">
+                <a href="icon.html">
+                <div class="work_content">
+                    <div class="work_card_img">
+                        <img src="project_img/icon_cover_work.png">
+                    </div>
+                    <div class="work_content_cap">
+                        <h3>The Choosen</h3>
+                        <p> 2024</p>
+                        <p>#iconography</p>
+                    </div>
+                </div>
+            </a>
+            </li>
+
+            <li class="work_card wc_1">
+                <div class="work_content">
+                    <div class="work_card_img">
+                        <img src="project_img/thing_cover_work.JPG">
+                    </div>
+                    <div class="work_content_cap">
+                        <h3>Stuff</h3>
+                        <p>since 2004</p>
+                        <p>#artbyme</p>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+
+       </div>
+    </div>
+</div>
+
+<!--the problem when put buttons and work-card-list in different div-->
+<script>
+var arrowIcons = document.querySelectorAll(".button_setup");
+var slider = document.querySelector(".work_list_inner");
+let translateX = 0;
+var moveLeft = slider.querySelector(".work_card").offsetWidth + 0.85; 
+ // Calculate the width of one item (notice: the gap between 2 card)
+
+ //--cannot code in js page cause the problem of 
+   // Cannot read properties of null (reading 'querySelector') of the work_card
+
+arrowIcons.forEach(icon => {
+    icon.addEventListener("click", () => {
+        var directionLeft = icon.id === "left" ? 1 : -1; // Left button moves right, right button moves left
+        translateX += directionLeft * moveLeft;
+        slider.style.transform = `translate3d(${translateX}px, 0, 0)`;
+    });
+
+});
+
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const nav = document.querySelector('nav');
+    const aboutText = document.querySelector('.work_text_section');
+
+    // Add animation classes to trigger CSS animations
+    aboutText.classList.add('animateHomeContainer');
+    if (nav) {
+        // Add the animation class to the nav element
+        nav.classList.add('animateNav');
+    }
+});
+</script>
+<footer>
+        <pre>© 2024 Thu . All rights reserved.</pre>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="work.css">  
+    <link rel="stylesheet" href="miniwork.css">  
+</head>
+<body >
+    <nav style="background-color:#e86f87;">
+        <div>
+            <a href="home.html"><img id="logo" src="./assets_1/logo_nav.png"> </a>
+        </div>
+        <ul class="navigation_menu">
+            <li>
+                <a href="index.html">home</a>
+            </li>
+            <li>
+                <a href="about.html">about</a>
+            </li>
+            <li class="underline_work">
+                <a href="work.html">work</a>
+            </li>
+        </ul>
+        <div class="contact_button"><a href="contact.html">Contact</a></div>
+        <div id="hamburger_menu" onclick="popup_navmenu()"><img src="assets_1/hamburgermenu.png"></div>
+
+    </nav>
+</div>
+    <div class="overlay" id="responsive_menu">
+        <div class="closebtn" onclick="close_navmenu()"><img src="assets_1/quit_menu.png"></div>
+        <div class="overlay-content">
+            <li><a href="index.html">home</a> </li>
+            <li><a href="about.html">about</a> </li>
+            <li>
+                <a href="work.html">work</a>  </li>
+            <li><a href="contact.html">contact</a>  </li>
+        </div>
+    </div>
+
+
+
+<div class="angel_background">
+    <img  class="bg1" id="icon_bg" src="project_img/icon_bg.png">
+    <img class= "bg2" id="icon_bg2"src="project_img/icon_bg2.png">
+</div>
+<div id="top"class="angel_container">
+    <div class="angel_body">
+        <div class="angel_intro">
+            <p class="title_miniwork"> The Choosen</p>
+            <p class="explain_miniwork">Most people have heard of Christ and His miracle stories. In paintings, 
+                He is often depicted with His disciples, particularly the 12 apostles He personally chose. 
+                These 12 Apostles were the closest disciples of Jesus, selected by Him to spread His teachings 
+                and continue His mission after His martyrdom. This project illustrates the stories behind these 
+                12 special individuals, each with their own unique and significant story that made them the chosen ones. 
+                In each icon, we strive to convey not only their 
+                well-known stories but also the myths associated with them and their lasting legacy. These are 12 icons, each with 3 adaptation sizes.</p>
+        </div>
+    </div>
+    <div class="angel_work">
+        <div class="slider">
+            <div class="slide_track">
+                <div class="slide">
+                <img src="project_img/icon1.png" >
+                
+                </div>
+                <div class="slide">
+                    <img src="project_img/icon2.png">
+                </div>
+                <div class="slide">
+                    <img src="project_img/icon3.png">
+                </div>
+                <div class="slide">
+                    <img src="project_img/icon4.png">
+                </div>
+                <div class="slide">
+                    <img src="project_img/icon5.png">
+                </div>
+                
+        
+                    <!--oduble it-->
+                    <div class="slide">
+                        <img src="project_img/icon1.png" >
+                    </div>
+                    <div class="slide">
+                        <img src="project_img/icon2.png">
+                    </div>
+                    <div class="slide">
+                        <img src="project_img/icon3.png">
+                    </div>
+                    <div class="slide">
+                        <img src="project_img/icon4.png">
+                    </div>
+                    <div class="slide">
+                        <img src="project_img/icon5.png">
+                    </div>
+                   
+           </div>
+        </div>
+       <img class="below_img" src="project_img/icon_full.png">
+    </div>
+</div>
+
+<a href="#top">
+<img class="up_button" src="assets_1/right-button.png"></a>
+<a href="work.html#back"> 
+    <img class="back_button" src="assets_1/left-button.png">
+</a>
+
+<footer  style="background-color: #e86f87;">
+    <style>
+        footer{
+            position: static;
+        margin-top:15vw;
+        }
+    </style>
+        <pre>© 2024 Thu . All rights reserved.</pre>
+    </footer>
+
+</body>
+<script>
+    //text animtion
+    document.addEventListener('DOMContentLoaded', function() {
+        const aboutText = document.querySelector('.angel_intro');
+    
+        // Add animation classes to trigger CSS animations
+        aboutText.classList.add('animateHomeContainer');
+    });
+    </script>
+</html>

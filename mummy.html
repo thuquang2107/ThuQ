@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="work.css">  
+    <link rel="stylesheet" href="miniwork.css">  
+
+</head>
+<body style="background: linear-gradient(to top, #D8CA84, #2B3D3E, #042231);">
+    <nav style="background-color: #877D69;">
+        <div>
+            <a href="home.html"><img id="logo" src="./assets_1/logo_nav.png"> </a>
+        </div>
+        <ul class="navigation_menu">
+            <li>
+                <a href="home.html">home</a>
+            </li>
+            <li>
+                <a href="about.html">about</a>
+            </li>
+            <li class="underline_work">
+                <a href="work.html">work</a>
+            </li>
+        </ul>
+        <div class="contact_button"><a href="contact.html">Contact</a></div>
+        <div id="hamburger_menu" onclick="popup_navmenu()"><img src="assets_1/hamburgermenu.png"></div>
+
+    </nav>
+</div>
+    <div class="overlay" id="responsive_menu">
+        <div class="closebtn" onclick="close_navmenu()"><img src="assets_1/quit_menu.png"></div>
+        <div class="overlay-content">
+            <li><a href="index.html">home</a> </li>
+            <li><a href="about.html">about</a> </li>
+            <li>
+                <a href="work.html">work</a>  </li>
+            <li><a href="contact.html">contact</a>  </li>
+        </div>
+    </div>
+
+
+
+
+    <div class="angel_background">
+        <img  class="bg1" id="mummy_bg" src="project_img/mummy_bg.2.png">
+        <img class= "bg2" id="mummy_bg2" src="project_img/mummy_bg.png" alt="Sandclock GIF">
+    </div>
+    <div id="top"class="angel_container">
+        <div class="angel_body">
+            <div class="angel_intro"  style="color:white;">
+                <p class="title_miniwork"> A Tale of Mummification</p>
+                <p class="explain_miniwork">Everyone has their own way of remembering those they’ve lost. 
+                    Some hold their memories deep within their hearts, while others choose to let 
+                    go and move on. No matter the approach, every effort is worth it. In this project, we use an 
+                    infographic that combines storytelling with a journey through the lost art of ancient empires 
+                    to illustrate the process of mummification, conveying this deeper meaning. The audience steps into 
+                    the shoes of a husband who has just lost his beloved wife to an ancient curse and navigates through 
+                    enigmatic rooms, each representing a crucial step in the mummification process. 
+                    Once you’ve completed the journey, you’ll grasp the true meaning behind your character’s actions.</p>
+            </div>
+        </div>
+        <div class="angel_work">
+            <div class="slider">
+                <div class="slide_track">
+                    <div class="slide">
+                    <img src="project_img/mummy_cover.png" >
+                    </div>
+                    <div class="slide">
+                        <img src="project_img/mummy2.png">
+                    </div>
+                    <div class="slide">
+                        <img src="project_img/mummy3.png">
+                    </div>
+                    <div class="slide">
+                        <img src="project_img/mummy4.png">
+                    </div>
+                    <div class="slide">
+                        <img src="project_img/mummy5.png" >
+                            
+                    </div>
+
+                        <!--oduble it-->
+                    <div class="slide">
+                     <img src="project_img/mummy6.png" >
+                    </div>
+                    <div class="slide">
+                         <img src="project_img/mummy7.png">
+                    </div>
+                    <div class="slide">
+                       <img src="project_img/mummy8.png">
+                    </div>
+                    <div class="slide">
+                        <img src="project_img/mummy9.png">
+                     </div>
+                    <div class="slide">
+                       <img src="project_img/mummy10.png" >      
+                    </div>
+               </div>
+               
+            </div>
+           
+        </div>       
+                <iframe src="https://www.youtube.com/embed/lJw6XOrAQRo" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            
+            </div>
+        
+    </div>
+    <a href="#top" style="transition: 0.5s ease-in;">
+    <img class="up_button" src="assets_1/right-button.png" style="transition: 0.5s ease-in;"></a>
+
+    <a href="work.html#back">
+        <img class="back_button" src="assets_1/left-button.png">
+    </a>
+
+
+    <footer  style="background-color: #877D69;">
+        <style>
+            footer{
+                position: static;
+            margin-top:15vw;
+            }
+        </style>
+            <pre>© 2024 Thu . All rights reserved.</pre>
+        </footer>
+
+        <script src="./script.js"></script>
+        <script>
+            //text animtion
+            document.addEventListener('DOMContentLoaded', function() {
+                const aboutText = document.querySelector('.angel_intro');
+            
+                // Add animation classes to trigger CSS animations
+                aboutText.classList.add('animateHomeContainer');
+            });
+            </script>
+</body>
+</html>
