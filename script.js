@@ -61,6 +61,29 @@ document.addEventListener("click", function (event) {
     }, "-=0.5");
 });
 
+function handleEvent(event) {
+    // Prevent the default touch behavior on tablets
+    event.preventDefault();
+    createSticker(event);
+}
+
+document.addEventListener("click", handleEvent);
+
+// Listen for touch events (tablets, phones)
+document.addEventListener("touchend", function(event) {
+    // Adjust touch event to work like a click
+    let touch = event.changedTouches[0];
+    let simulatedEvent = new MouseEvent("click", {
+        bubbles: true,
+        cancelable: true,
+        view: window,
+        clientX: touch.clientX,
+        clientY: touch.clientY
+    });
+    touch.target.dispatchEvent(simulatedEvent);
+    handleEvent(simulatedEvent);
+}, false);
+
 ///////draggable_home
 document.querySelectorAll('.des_text').forEach(item => {
     item.addEventListener('dragstart', dragStart);
