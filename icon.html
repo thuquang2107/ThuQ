@@ -10,7 +10,7 @@
 <body >
     <nav style="background-color:#e86f87;">
         <div>
-            <a href="home.html"><img id="logo" src="./assets_1/logo_nav.png"> </a>
+            <a href="index.html"><img id="logo" src="./assets_1/logo_nav.png"> </a>
         </div>
         <ul class="navigation_menu">
             <li>
@@ -38,7 +38,15 @@
             <li><a href="contact.html">contact</a>  </li>
         </div>
     </div>
+    <script>
+        function popup_navmenu() {
+            document.getElementById("responsive_menu").style.width = "75%";
+        }
 
+        function close_navmenu() {
+            document.getElementById("responsive_menu").style.width = "0%";
+        }
+    </script>
 
 
 <div class="angel_background">
@@ -49,6 +57,7 @@
     <div class="angel_body">
         <div class="angel_intro">
             <p class="title_miniwork"> The Choosen</p>
+            <p class="miniwork_subheading"> Group project/ collaboration with Bao Chau, Phuong Bach, and Harlee</p>
             <p class="explain_miniwork">Most people have heard of Christ and His miracle stories. In paintings, 
                 He is often depicted with His disciples, particularly the 12 apostles He personally chose. 
                 These 12 Apostles were the closest disciples of Jesus, selected by Him to spread His teachings 
@@ -99,20 +108,52 @@
            </div>
         </div>
        <img class="below_img" src="project_img/icon_full.png">
+        <a class="miniwork_subheading" href="project_img/IconExplaination.pdf" target="_blank" style="margin-top:3vw;">Icon Explanation</a>
     </div>
 </div>
 
-<a href="#top">
-<img class="up_button" src="assets_1/right-button.png"></a>
-<a href="work.html#back"> 
+<div class="miniwork_button" style="width:100vw;height: auto;">
+    <a href="#top">
+    <img class="up_button" src="assets_1/right-button.png">
+    </a>
+    <a href="work.html#back"> 
     <img class="back_button" src="assets_1/left-button.png">
-</a>
+    </a>
+</div>
+
+<div>
+    <p class="explore_text"> Explore more</p>
+<div class="hagtag">
+    <ul>
+        <li>
+            <a href="angel.html">
+                #web_based poem
+            </a>
+        </li>
+        <li>
+            <a href="lastday.html">
+                #web_design
+            </a>
+        </li>
+        <li>
+            <a href="mummy.html">
+                #interactive_inforgraphic
+            </a>
+        </li>
+        <li>
+            <a href="thing.html">
+                #artbyme
+            </a>
+        </li>
+    </ul>
+</div>
+</div>
 
 <footer  style="background-color: #e86f87;">
     <style>
         footer{
             position: static;
-        margin-top:15vw;
+        margin-top:25vw;
         }
     </style>
         <pre>© 2024 Thu . All rights reserved.</pre>
