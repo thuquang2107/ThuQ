@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="work.css">  
+    <link rel="stylesheet" href="miniwork.css">  
+</head>
+<body>
+    <nav >
+        <div>
+            <a href="index.html"><img id="logo" src="./assets_1/logo_nav.png"> </a>
+        </div>
+        <ul class="navigation_menu">
+            <li>
+                <a href="index.html">home</a>
+            </li>
+            <li>
+                <a href="about.html">about</a>
+            </li>
+            <li class="underline_work">
+                <a href="work.html">work</a>
+            </li>
+        </ul>
+        <div class="contact_button"><a href="contact.html">Contact</a></div>
+        <div id="hamburger_menu" onclick="popup_navmenu()"><img src="assets_1/hamburgermenu.png"></div>
+
+    </nav>
+</div>
+    <div class="overlay" id="responsive_menu">
+        <div class="closebtn" onclick="close_navmenu()"><img src="assets_1/quit_menu.png"></div>
+        <div class="overlay-content">
+            <li><a href="index.html">home</a> </li>
+            <li><a href="about.html">about</a> </li>
+            <li>
+                <a href="work.html">work</a>  </li>
+            <li><a href="contact.html">contact</a>  </li>
+        </div>
+    </div>
+
+    <script>
+        function popup_navmenu() {
+            document.getElementById("responsive_menu").style.width = "75%";
+        }
+
+        function close_navmenu() {
+            document.getElementById("responsive_menu").style.width = "0%";
+        }
+    </script>
+
+<div class="angel_background">
+    <img  class="bg1" id="angel_bg" src="project_img/angel_bg.png">
+    <img class= "bg2" id="angel_bg2"src="project_img/sandclock.gif" alt="Sandclock GIF">
+</div>
+<div id="top"class="angel_container">
+    <div class="angel_body">
+        <div class="angel_intro">
+            <p class="title_miniwork"> The Angel </p>
+            <p class="miniwork_subheading"> Individual project</p>
+            <p class="explain_miniwork">There is a Vietnamese saying that I have heard for years: ”Adults were once children, but
+                children have never been adults. Adults see the problems of a 17-year-old as just the mouth
+                of a well, but for that child, it is an entire sky.". That statement, unsurprisingly, resonates with
+                my experience of being in my 20s. In my 20s, I find myself tragically gripped by a fear- named
+                “maturity”. From a child's perspective, this fear is understandable. But that is something
+                unavoidable. One day this child will be a adult. Instead of scaring, the best way to overcome a
+                fear is to fight it. Therefore, I consider this project a great chance to encourage myself to
+                accept what can come and what can not change via the hidden meaning of the poem “The
+                Angel” written by William Blake.</p>
+        </div>
+    </div>
+    <div class="angel_work">
+        <div class="slider">
+            <div class="slide_track">
+                <div class="slide">
+                <img src="project_img/angel_cover.png" >
+                
+                </div>
+                <div class="slide">
+                    <img src="project_img/angel1.png">
+                </div>
+                <div class="slide">
+                    <img src="project_img/angel2.png">
+                </div>
+                <div class="slide">
+                    <img src="project_img/angel3.png">
+                </div>
+                <div class="slide">
+                    <img src="project_img/angel4.png">
+                </div>
+                
+        
+                    <!--doduble it-->
+                    <div class="slide">
+                        <img src="project_img/angel5.png">
+                    </div>
+                <div class="slide">
+                  <img src="project_img/angel6.png">
+                </div>
+                <div class="slide">
+                    <img src="project_img/angel7.png">
+                </div>
+                <div class="slide">
+                    <img src="project_img/angel8.png">
+                </div>
+                <div class="slide">
+                    <img src="project_img/angel_cover.png" >
+                </div>
+                   
+           </div>
+        </div>
+        <iframe src="https://www.youtube.com/embed/IVei0TnUAV8" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+    </div>
+</div>
+
+<div class="miniwork_button" style="width:100vw;height: auto;">
+    <a href="#top">
+    <img class="up_button" src="assets_1/right-button.png">
+    </a>
+    <a href="work.html#back"> 
+    <img class="back_button" src="assets_1/left-button.png">
+    </a>
+</div>
+
+<div>
+    <p class="explore_text"> Explore more</p>
+<div class="hagtag">
+    <ul  >
+        <li>
+            <a href="lastday.html">
+                #web_design
+            </a>
+        </li>
+        <li>
+            <a href="mummy.html">
+                #interactive_inforgraphic
+            </a>
+        </li>
+        <li>
+            <a href="icon.html">
+                #icongraphic
+            </a>
+        </li>
+        <li>
+            <a href="thing.html">
+                #artbyme
+            </a>
+        </li>
+    </ul>
+</div>
+</div>
+</body>
+
+
+<footer>
+    <style>
+        footer{
+            position: static;
+        margin-top:25vw;
+        }
+    </style>
+        <pre>© 2024 Thu . All rights reserved.</pre>
+    </footer>
+    <script>
+        //text animtion
+        document.addEventListener('DOMContentLoaded', function() {
+            const aboutText = document.querySelector('.angel_intro');
+        
+            // Add animation classes to trigger CSS animations
+            aboutText.classList.add('animateHomeContainer');
+        });
+        </script>
+</html>
+
+<!-- <img src="project_img/angel_cover.png" style="width: 50vw;">
+       <div> <img src="project_img/angel1.png">
+        <img src="project_img/angel2.png"></div> -->

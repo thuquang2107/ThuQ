@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2_Portfolio_ThuQuang</title>  
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="phone.css"> 
+    <link rel="stylesheet" href="tablet.css">  -->
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="index.html"><img id="logo" src="./assets_1/logo_nav.png"> </a>
+        </div>
+        <ul class="navigation_menu">
+            <li>
+                <a href="index.html">home</a>
+            </li>
+            <li>
+                <a href="about.html">about</a>
+            </li>
+            <li>
+                <a href="work.html">work</a>
+            </li>
+        </ul>
+        <div class="contact_button" style="background-color:#FCEC59;"><a href="Contact.html" style="color:black;">Contact</a></div>
+        <div id="hamburger_menu" onclick="popup_navmenu()"><img src="assets_1/hamburgermenu.png"></div>
+    </nav>
+
+
+    <div class="overlay" id="responsive_menu">
+        <div class="closebtn" onclick="close_navmenu()"><img src="assets_1/quit_menu.png"></div>
+        <div class="overlay-content">
+            <li><a href="index.html">home</a> </li>
+            <li><a href="about.html">about</a> </li>
+            <li><a href="work.html">work</a>  </li>
+            <li><a href="contact.html">contact</a>  </li>
+        </div>
+    </div>
+    <script>
+        function popup_navmenu() {
+            document.getElementById("responsive_menu").style.width = "75%";
+        }
+
+        function close_navmenu() {
+            document.getElementById("responsive_menu").style.width = "0%";
+        }
+    </script>
+
+<div class="contact_page">
+    <div class="contact_container">
+            <div class="contact_link">
+                    <a href="https://www.instagram.com/_anhthuho_/">
+                    <img class="link" id="link_ing" src="assets_1/ing_contact.png">
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100017144591418">
+                        <img class="link" id="link_face"  src="assets_1/face_conact.png">
+                    </a>
+                    <a href="https://www.behance.net/thhong13">
+                        <img class="link" id="link_behance"  src="assets_1/behance_contact.png">
+                    </a>
+                    <a href="https://www.linkedin.com/in/anh-th%C6%B0-ho%C3%A0ng-0a0307299/">
+                        <img class="link" id="link_linkin" src="assets_1/linin_contact.png">
+                    </a>
+                    <a  href="mailto:anhthuhoang@gmail.com">
+                    <img class="link" id="link_mail"  src="assets_1/mail_contact.png">
+                    </a>
+                    <a href="tel:+84706888040"> 
+                    <img class="link" id="link_phone"  src="assets_1/phone_contact.png">
+                    </a>
+                    
+            </div>
+            <img   class="contact_sticker" src="assets_1/contact.png">
+    </div>
+        
+    <div class="drop_text"> drop a line for creating something fun</div>    
+</div>  
+
+<div style="display: flex; justify-content: center;">
+<img class="contact_gif" src="assets_1/cursor.gif" alt="Cursor GIF" style="z-index: 3;"> 
+</div>
+<!-- <div class="text">
+    <div>T
+      <div>T</div>
+      <div>T</div>
+      <div>T</div>
+      <div>T</div>
+   
+    
+     
+    </div>
+    <div>h
+      <div>h</div>
+      <div>h</div>
+      <div>h</div>
+      <div>h</div>
+    </div>
+
+    <div>ư
+      <div>ư</div>
+      <div>ư</div>
+      <div>ư</div>
+      <div>ư</div>
+      
+    </div>
+  </div> -->
+
+
+
+    <footer>
+        <style>
+            footer{
+            margin-top:1vw;
+            }
+        </style>
+        <pre>© 2024 Thu . All rights reserved.</pre>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const nav = document.querySelector('nav');
+            const aboutText = document.querySelector('.drop_text');
+
+            // Add animation classes to trigger CSS animations
+            aboutText.classList.add('animateHomeContainer');
+            if (nav) {
+                // Add the animation class to the nav element
+                nav.classList.add('animateNav');
+            }
+        });
+        </script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2_Portfolio_ThuQuang</title>
+    <link rel="stylesheet" href="style.css">    
+    <!-- <link rel="stylesheet" href="phone.css"> 
+    <link rel="stylesheet" href="tablet.css">  -->
+
+</head>
+<body>
+
+<nav>
+    <div>
+        <a href="index.html"><img id="logo" src="./assets_1/logo_nav.png"> </a>
+    </div>
+    <ul class="navigation_menu">
+        <li>
+            <a href="index.html">home</a>
+        </li>
+        <li class="underline_about">
+            <a href="about.html">about</a>
+        </li>
+        <li>
+            <a href="work.html">work</a>
+        </li>
+    </ul>
+    <div class="contact_button"><a href="contact.html">Contact</a></div>
+    <div id="hamburger_menu" onclick="popup_navmenu()"><img src="assets_1/hamburgermenu.png"></div>
+</nav>
+
+<div class="overlay" id="responsive_menu">
+    <div class="closebtn" onclick="close_navmenu()"><img src="assets_1/quit_menu.png"></div>
+    <div class="overlay-content">
+        <li><a href="index.html">home</a> </li>
+        <li><a href="about.html">about</a> </li>
+        <li><a href="work.html">work</a>  </li>
+        <li><a href="contact.html">contact</a>  </li>
+    </div>
+</div>
+<script>
+    function popup_navmenu() {
+        document.getElementById("responsive_menu").style.width = "75%";
+    }
+
+    function close_navmenu() {
+        document.getElementById("responsive_menu").style.width = "0%";
+    }
+</script>
+
+
+<div class="ab_p1_container">
+<div class="about_page1">
+    <img src="assets_1/about.png">
+    <div class="about_text_subheading">ABOUT ME</div>
+    <div class="about_text_section">
+        <div id="about_text_setup" class="about_text">who is she ? </div>
+      
+          <p class="text_about">  Thu, a newcomer to design who discovered her passion at 18, is ambitious and constantly pushes her creative boundaries to produce artworks that are both aesthetically pleasing and deeply expressive of her personality.</p>
+    </div> 
+</div>
+</div>   
+
+
+<div class="background_ab_p2">
+<div class="page2_section" style="position: relative;">
+    <div id="edu_layout">
+        <div class="about_text" id="ed_text"> education</div>
+        <pre class="year">2023 - ongoing</pre>
+        <p> Bachelor of Digital Media <br> RMIT Vietnam Univesity</p>
+    </div>
+
+    <div id="sw_layout">
+        <div class="about_text" id="sw_text"> software</div>
+        <p> Illustration <br>Photoshop <br>Indesgin <br>Figma </p>
+    </div>
+
+    <div id="lang_layout">
+        <div class="about_text" id="lang_text"> languages</div>
+        <p > Vietnamese (native)<br>English (advanced)<br>Chinese (low-intermediate)
+        </p>
+    </div>
+
+    <div id="mom_layout">
+        <div class="about_text" id="mom_text"> creative field</div>
+        <p >2D graphics <br>& Digital paintings
+        </p>
+    </div>
+
+
+    <svg id="mySVG" viewBox="0 0 1505 811" preserveAspectRatio="xMidYMid meet" width="100%" height="auto" fill="none" preserveAspectRatio="xMidYMax meet">
+        <g filter="url(#filter0_f_225_7)">
+            <path class="line" fill="none" d="M1468.5 55.5001C1398 158 1183.76 241.155 1036.5 237.5C895.5 234 866 116.5 930.5 69.5C1008.26 12.84 1102.5 31.6429 1184 136C1278.5 257 1169.5 397 989.5 392C809.5 387 639.5 316.461 535 326.5C420.5 337.5 311.896 400.999 291.5 518.5C268.5 651 386 782.344 524.5 772C645 763 696 715 677 613C665.36 550.514 527.5 378.5 238.5 301.5C60.2997 254.021 46.8333 261.333 28 263" stroke="#FBF7CE" stroke-width="21"/>
+        </g>
+        <path class="line" fill="none" d="M1468.5 55.5001C1398 158 1183.76 241.155 1036.5 237.5C895.5 234 866 116.5 930.5 69.5C1008.26 12.84 1102.5 31.6429 1184 136C1278.5 257 1169.5 397 989.5 392C809.5 387 639.5 316.461 535 326.5C420.5 337.5 311.896 400.999 291.5 518.5C268.5 651 386 782.344 524.5 772C645 763 696 715 677 613C665.36 550.514 527.5 378.5 238.5 301.5C60.2997 254.021 43 263.5 27 263.5" stroke="#E491BB" stroke-width="10"/>
+        <defs>
+            <filter id="filter0_f_225_7" x="0.0742188" y="0.606445" width="1504.08" height="809.468" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feGaussianBlur stdDeviation="13.5" result="effect1_foregroundBlur_225_7"/>
+            </filter>
+        </defs>
+    </svg>
+</div>
+</div>
+
+<div class="ab_p3_container">
+    <div>
+        <p class="quote_about">   
+    “You only live once, but if you do it right, once is enough.”</p>
+        </div>
+    
+        <div class="quote">
+            <div>
+                <div>m</div>
+              </div>
+              <div style="z-index: 100;">
+                <div >y</div>
+              </div>
+            <div>
+              <div>q</div>
+            </div>
+
+            <div>
+              <div>u</div>
+            </div>
+            <div>
+              <div>o</div>
+            </div>
+
+            <div>
+                <div>t</div>
+              </div>
+
+              <div>
+                <div>e</div>
+              </div>
+              
+          </div>
+        
+</div>    
+</div>
+
+
+<footer>
+    <style>
+        footer{
+        margin-top:15vw;
+        }
+    </style>
+        <pre>© 2024 Thu . All rights reserved.</pre>
+    </footer>
+<style>
+#mySVG {
+    position: absolute;
+    width: 100vw;
+    height: 110vh;
+    z-index:-10;
+    margin-top:-8vw;
+    align-items: center;
+    justify-content: center;
+  }
+</style>  
+
+<script>
+    // animate for the line_decor
+    // Get all elements with the class 'line'
+    var lines = document.getElementsByClassName("line");
+
+    Array.from(lines).forEach(line => {
+      
+        var length = line.getTotalLength();  // Get the total length of the path
+
+        line.style.strokeDasharray = length; // The start position of the drawing
+
+       
+        line.style.strokeDashoffset = length; // Hide the line by offsetting dash
+
+        // Add scroll event listener
+        window.addEventListener("scroll", () => {
+         
+            const offset = -0.2; // Adjust this value (0.0 - 1.0) to change when the drawing starts
+            var scrollPercent = ((document.body.scrollTop + document.documentElement.scrollTop) / 
+            (document.documentElement.scrollHeight - document.documentElement.clientHeight) - offset) 
+                         / (1 - offset);
+            var draw = length * scrollPercent;
+
+            line.style.strokeDashoffset = length - draw;
+        });
+    });
+</script>
+
+
+<script>
+    //text animtion
+    document.addEventListener('DOMContentLoaded', function() {
+        const nav = document.querySelector('nav');
+        const aboutText = document.querySelector('.text_about');
+    
+        // Add animation classes to trigger CSS animations
+        aboutText.classList.add('animateHomeContainer');
+        if (nav) {
+            // Add the animation class to the nav element
+            nav.classList.add('animateNav');
+        }
+    });
+    </script>
+
+
+
+
+</body>
+</html>
