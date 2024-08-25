@@ -1,0 +1,807 @@
+
+/* Set_up */
+::-webkit-scrollbar {
+    width: 0.7vw;
+    position: absolute;
+}
+::-webkit-scrollbar-track {
+    background-color:var(--primary-bg);
+    border-radius:1vw;
+    ;
+}
+::-webkit-scrollbar-thumb {
+    background:#DD6A48;
+    border-radius: 1vw;
+}
+html {
+    cursor: url('assets_1/cursor2.png'), auto;
+}
+a{
+    cursor: url('assets_1/cursor4.png'), auto;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    background-color: --var(#FFF9F0);
+    primary-color-pink: --var(#F299CE);
+    primary-color-purple: --var(#5E34FE);
+    primary-color-yellow: --var(#FCEC59);
+    big-text:--var( 'ClashDisplay-Medium');
+    para-text: --var('ClashGrotesk-Variable');
+}
+
+/************ preloader ***********/
+.loader-overlay {
+    position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: rgba(152, 150, 255,1);
+     background-repeat: no-repeat;
+     z-index: 9999;
+     transform:  translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+     transform-style: preserve-3d;
+     transition: translate3d(0px, -100%, 0px) 1.5s ease, opacity 1.5s ease-out;
+ }
+ 
+body {
+    margin: 0%;
+    max-width: 100%;
+    zoom:100%;
+    background:#FFF9F0;
+    min-height: 100vh;
+    min-height: 100svh;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    position: relative;
+}
+a{
+    text-decoration: none;
+}
+@font-face {
+    font-family: 'ClashDisplay-Medium';
+    src: url('ClashDisplay-Medium.woff2') format('woff2'),
+         url('../fonts/ClashDisplay-Medium.woff') format('woff'),
+         url('ClashDisplay-Medium.ttf') format('truetype');
+         
+    font-weight: 100;
+    font-display: auto;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'ClashDisplay-Variable';
+    src:url('ClashDisplay-Variable.ttf') format('truetype');
+         
+    font-weight: 450;
+    font-display: auto;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'ClashGrotesk-Variable';
+    src:url('ClashGrotesk-Variable.ttf') format('truetype');
+         
+    font-weight: 450;
+    font-display: auto;
+    font-style: normal;
+  }
+  p{
+     font-family: 'ClashGrotesk-Variable';
+     font-size: 1.2vw;
+  }
+  nav {
+    width: 100vw;
+    top:0;
+    z-index: 50;
+    position: sticky;
+    background: #F299CE;
+    padding: 0.5vw 0;
+    display: flex;
+    flex-direction: row;
+    gap: 20vw;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-items: center;
+}
+
+nav a {
+    color: black;
+    font-family: 'ClashDisplay-Medium';
+    font-size: 1.5vw;
+    text-decoration: none;
+}
+.animateHomeContainer {
+    animation: fadeInUp 1s ease-out;
+}
+
+.animateNav {
+    animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.underline_work{
+    background-color:#FCEC59;
+    padding:0.45vw; 
+    border-radius: 0.625vw;;
+}
+
+#logo {
+    width: 3vw;
+    height: 3vw;
+    margin-right: 5.75vw;
+}
+
+.navigation_menu {
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    gap: 3vw;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.navigation_menu a {
+    transition: ease-out 0.5s;
+}
+
+.navigation_menu a:hover {
+    color: white ;
+}
+
+.contact_button {
+    padding: 0.5vw 1.25vw;
+    justify-content: center;
+    align-items: center;
+   border:#FCEC59 .12vw solid ;
+    border-radius: 0.625vw;
+    transition: ease-out 0.5s;
+    cursor: pointer;
+    background-color: #5E34FE;
+}
+
+.contact_button a {
+    color: white;
+    font-family: 'ClashDisplay-Medium';
+    font-size: 1.5vw;
+}
+
+.contact_button:hover {
+    background-color: #FCEC59;
+}
+.contact_button:hover a {
+    color: black;
+}
+#hamburger_menu {
+    display: none;
+}
+
+.overlay {
+    display: none;
+}
+
+
+/*****WORK_PAGE****/
+/***work_p1****/
+.work_p1_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+}
+
+.work_landing{
+    width:100vw;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap:8vw;
+    padding: 0 12.5vw;
+    position: relative;
+}
+.work_subheading{  /*Let's explore my works*/
+    width:85vw;
+    transform: translate(0,-11vw);
+    text-align: center;
+    font-size: 4vw;
+    text-transform: uppercase;
+    background-color:#FCEC59;
+    opacity:0.95;
+    border-radius: 0.875vw;
+    font-family: 'ClashDisplay-Medium';
+    position: absolute;
+    box-shadow: 
+    rgba(94, 52, 254, .9) 5px 5px, 
+    rgba(94, 52, 254, 0.8) 10px 10px, 
+    rgba(242, 153, 206, 0.7) 15px 15px, 
+    rgba(242, 153, 206, 0.6) 20px 20px; 
+   
+}
+
+.work_landing p{
+    padding: 0 2vw;
+    margin-top:4.5vw;
+    font-size: 1.6vw;
+    font-family: 'ClashGrotesk-Variable'; 
+}
+.work_landing img{
+    width:32.5vw;
+    height:auto;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.377) );
+    transform: rotate(-10deg);
+    animation: folder 1s  cubic-bezier(0.42, 0.0, 0.58, 1.0) infinite;
+}
+@keyframes folder {
+    0%{
+        transform: translate(0vw,.5vh) rotate(-7deg);
+    }
+    50%{
+     transform: translate(0, .1vh) rotate(-7deg);
+        }
+    100%{
+          transform: translate(0vw,.5vh) rotate(-7deg);
+        
+    }
+}
+/**************Gallary_port**********/
+.work_page{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding-top:5vw;
+    height:50vw;
+}
+
+.work_button{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    left: 0;
+    padding:0 7vw;
+    pointer-events: none;
+    width: 100vw;
+    position: absolute;
+    z-index:3;
+}
+.button_setup{
+    width:5vw;
+    pointer-events: all;
+    cursor: pointer;
+    z-index:30;
+}
+#work_list_setup{
+align-items: center;
+padding-left: 6.675vw;
+/*margin-left:7.5vw; want to see the card_slider use padding*/
+justify-content: center;
+
+}
+.work_list_inner{
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.5s ease-in-out;
+    align-items: stretch; 
+}
+.work_list_inner li:nth-child(2n){
+    margin-top:3.5vw;
+}
+
+.work_list_inner li{
+    align-self:flex-start;
+    list-style: none;
+    align-items: stretch; 
+    /*margin*/
+}
+
+.wc_1, .wc_2{
+    position: relative;
+    transition: 0.5s ease-in-out ;
+}
+.wc_1::after{
+    content: '';
+    background-image: url(project_img/trying1.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    content: '';
+    display: block;
+    position: absolute;
+    transform: scale(.76);
+    transition: 0.5s ease-in-out ;
+    top: 0; /* Position it at the top of #wc_1 */
+    left: 0; /* Position it at the left of #wc_1 */
+    width: 100%; /* Adjust width as needed */
+    height: 100%; /* Adjust height as needed */
+    z-index: -1; /* Ensure it's behind the content, if needed */
+    opacity: 0.5; /* Optional: make it semi-transparent */
+}
+
+.wc_2::after{
+    background-image: url(project_img/trying4.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    content: '';
+    transform: scale(.76);
+    transition: 0.5s ease-in-out ;
+    position: absolute;
+    display: block;
+    top: 0; /* Position it at the top of #wc_1 */
+    left: 0; /* Position it at the left of #wc_1 */
+    width: 100%; /* Adjust width as needed */
+    height: 100%; /* Adjust height as needed */
+    z-index: -1; /* Ensure it's behind the content, if needed */
+    opacity: 0.5; /* Optional: make it semi-transparent */
+}
+
+.wc_1:hover::after,
+.wc_2:hover::after,
+.wc_1:active::after,
+.wc_2:active::after {
+    transform: scale(0.98);
+    opacity: 1;
+}
+.wc_1:hover,
+.wc_2:hover,
+.wc_1:active,
+.wc_2:active{
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.377) );
+    transform: scale(1.02);
+}
+.wc_1:hover .work_content,
+.wc_2:hover .work_content,
+.wc_1:active .work_content,
+.wc_1:active .work_content{
+    background-color:#F299CE;
+}
+
+.work_card{
+    padding:3.5vw;
+}
+
+.work_card_img img { 
+    width:17.5vw;
+    border-radius: 0.525vw;
+}
+
+.work_content{
+    /*background:linear-gradient(to right, #5E34FE, #F299CE, #FCEC59);*/
+    background-color:#FFF9F0;
+    border: 3.5px solid #F299CE;
+    transition: 0.5s ease-in-out ;
+    margin-top:-20px;
+    padding:2vw;
+    border-radius: 0.525vw;
+}
+
+.work_content_cap{
+color:black;
+padding-top:1.2vw;
+}
+.work_content_cap h3{
+    font-family:'ClashDisplay-Medium';;
+    font-size: 1.4vw;
+}
+
+footer{
+background-color: #F299CE;
+margin-top:10vw;
+height: 3.5vw;
+width:100%;
+display: flex;
+align-items: center;
+justify-content: center;
+bottom:0;
+}
+footer pre{
+font-size: 1.5vw;
+font-family: 'ClashDisplay-Medium';
+}
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    /*** OVERLAY MENU ***/
+    nav {
+        background-color:#f299ce;
+        gap: 35vw;
+        padding: 0.8vw 0;
+        position:sticky;
+    }
+    .contact_button,
+    .navigation_menu a {
+        display: none;
+    }
+    #hamburger_menu {
+        display: block;
+    }
+    .overlay {
+        position: fixed;
+        display: block;
+        height: 100%;
+        width: 0vw;
+        right: 0;
+        top: 0;
+        background-color:#5E34FE;
+        filter:drop-shadow(0 0 300px #000000);
+        overflow-x: hidden;
+        transition: 1s ease;
+        z-index: 61;
+    }
+    .contact_button,
+    .navigation_menu a {
+        display: none;
+    }
+   
+    .underline_work{
+        display: none;
+    }
+    
+
+    .overlay-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+        top: 30%;
+        width: 100%;
+        margin-top: 3vw;
+        text-align: center;
+        z-index: 62;
+    }
+    .overlay-content li{
+        list-style: none;
+        padding: 1vw;
+    }
+
+    .overlay a {
+        font-family:'ClashDisplay-Medium';
+        color: white;
+        font-size: 5vw;
+        text-decoration: none;
+        padding: 1.5vw;
+        display: flex;
+        justify-content: center;
+        transition: ease-out 360ms;
+        z-index: 100;
+    }
+
+    .overlay a:focus {
+        color: white;
+    }
+
+    .overlay .closebtn {
+        position: absolute;
+        top: 2.1vw;
+        right: 5.2vw;
+    }
+
+    #flower_home{
+        display: none;
+    }
+    #mwl_home{
+        display: none;
+    }
+    
+
+    /*** RESIZE: logo, hamburger menu, close btn ***/
+    .overlay .closebtn img,
+    #logo,
+    #hamburger_menu img {
+        width: 6vw;
+        height: auto;
+    }
+    #logo {
+        margin-right: 0;}
+
+    /*** CONTENT ***/
+    .full_homecontainer{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        position: relative;
+    }
+    .home_container {
+      top:30vw;
+        margin:0 auto;
+        left:15vw;
+    }
+
+    .home_heading {
+        font-size: 15vw;
+        line-height: 8.5vw;
+    }
+    
+    .home_sub_heading {
+        font-size: 2vw;
+    }
+    .background_home{
+        top:0vw;
+    }
+    #flower_home{
+        display: none;
+    }
+    #mwl_home{
+        display: none;
+    }
+
+/*work-intro*/
+
+.work_page{
+    margin-top:15vw;
+}
+.work_landing{
+    flex-direction: column-reverse;
+    align-items: center;
+    gap:0vw;
+    padding: 0 8.5vw;
+    margin-top:70px;
+    position: relative;
+}
+.work_subheading{  /*Let's explore my works*/
+    width:85vw;
+    transform: translate(0vw, -31vw);
+    text-align: center;
+    font-size: 6vw;
+    text-transform: uppercase;
+    background-color:#FCEC59;
+    opacity:0.95;
+    border-radius: 0.875vw;
+    font-family: 'ClashDisplay-Medium';
+    position: absolute;
+}
+.work_landing p {
+    padding: 0 2vw;
+    margin-top: 1vw;
+    font-size: 3.2vw;
+}
+
+.work_landing img {
+    width: 50.5vw;
+}
+    /*portfolio_page*/
+    #work_list_setup{
+        transform-origin: top left;
+        transform: scale(155%);
+    }
+
+    .work_button{
+        margin-top:10vw;
+        padding:0 4.5vw;
+    
+    }
+    .button_setup{
+        width:7vw;
+    }
+    #work_list_setup{
+    align-items: center;
+    padding-left: 3vw;
+    /*margin-left:7.5vw; want to see the card_slider use padding*/
+    justify-content: center;
+    
+    }
+    .work_list_inner li:nth-child(2n){
+        margin-top:3.5vw;
+    }
+    
+    .work_list_inner li{
+        align-self:flex-start;
+        list-style: none;
+        /*margin*/
+    }
+    .work_card{
+        padding:3.5vw;
+    }
+    .work_content{
+        border: 2.5px solid #F299CE;
+       
+    }
+    .wc_1, .wc_2 {
+        transform: scale(1);
+    }
+
+    .wc_1::after, .wc_2::after {
+        transform: scale(0.95); /* Slightly adjust scaling for touch devices */
+        opacity:0.8;
+    }
+    footer{
+        margin-top:40vw;
+}
+}
+
+@media screen and (max-width: 767.5px) {
+
+    /*** OVERLAY MENU ***/
+    nav {
+        gap: 28vw;
+        padding: 1.8vw 0;
+    }
+    .underline_work{
+        display: none;
+    }
+    .contact_button,
+    .navigation_menu a {
+        display: none;
+    }
+
+    #hamburger_menu {
+        display: block;
+    }
+
+    .overlay {
+        position: fixed;
+        display: block;
+        height: 100%;
+        width: 0;
+        right: 0;
+        top: 0%;
+        background-color:#5E34FE;
+        filter:drop-shadow(0 0 300px #000000);
+        overflow-x: hidden;
+        z-index: 60;
+        transition: 1s ease;
+    }
+
+    .overlay-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+        top: 30%;
+        width: 100%;
+        margin-top: 3vw;
+        text-align: center;
+    }
+    .overlay-content li{
+        list-style: none;
+        padding: 1vw;
+    }
+
+    .overlay a {
+        font-family:'ClashDisplay-Medium';
+        color: white;
+        font-size: 6vw;
+        text-decoration: none;
+        padding: 1.5vw;
+        display: flex;
+        justify-content: center;
+        transition: ease-out 360ms;
+        z-index: 100;
+    }
+
+    .overlay a:focus {
+        color: white;
+    }
+
+    .overlay .closebtn {
+        position: absolute;
+        top: 1.9vw;
+        right: 5.2vw;
+    }
+
+    /*** RESIZE: logo, hamburger menu, close btn ***/
+    .overlay .closebtn img,
+    #logo,
+    #hamburger_menu img {
+        width: 10vw;
+        height: auto;
+    }
+    
+    /*** CONTENT ***/
+
+    .action_home_p1{
+        display: none;
+    }
+    .pieces_home{
+        position: absolute;
+        z-index:-1;
+    }
+
+/*work-intro*/
+.work_p1_container{
+    margin-top:10vw;
+}
+.work_page{
+    margin-top:20vw;
+}
+.work_landing{
+    flex-direction: column-reverse;
+    align-items: center;
+    gap:0vw;
+    padding: 0 6.5vw;
+    position: relative;
+}
+.work_landing img {
+    width: 65.5vw;
+}
+
+.work_subheading{  /*Let's explore my works*/
+    width:85vw;
+    transform: translate(0vw, -51vw);
+    font-size: 7vw;
+    padding:0.75vw 0;
+   
+}
+.work_landing p {
+    padding: 0 2vw;
+    margin-top: 1vw;
+    font-size: 4.2vw;
+}
+    #work_list_setup{
+        transform-origin: top left;
+        transform: scale(290%);
+        padding-top:2.5vw;
+    }
+
+    .work_button{
+        padding:0 6.5vw;
+        margin-top:50vw;
+    
+    }
+    .button_setup{
+        width:10vw;
+    }
+    #work_list_setup{
+    padding-left: 3.5vw;
+    /*margin-left:7.5vw; want to see the card_slider use padding*/
+    
+    }
+    .work_list_inner li:nth-child(2n){
+        margin-top:0vw;
+    }
+    
+    .work_card{
+        padding:2.5vw;
+    }
+
+    .work_content{
+        /*background:linear-gradient(to right, #5E34FE, #F299CE, #FCEC59);*/
+        background-color:#FFF9F0;
+        border: 1.5px solid #F299CE;
+    }
+
+    .wc_1, .wc_2 {
+        transform: scale(1);
+    }
+
+    .wc_1::after, .wc_2::after {
+        transform: scale(0.95); /* Slightly adjust scaling for touch devices */
+        opacity:0.8;
+    }
+
+    footer{
+        margin-top:100vw;
+}
+}
