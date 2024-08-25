@@ -303,34 +303,7 @@ nav a {
 #work_list_setup{
 align-items: center;
 padding-left: 6.675vw;
-/*margin-left:7.5vw; want to see the card_slider use padding*/
-justify-content: center;
-
-}
-.work_list_inner{
-    display: flex;
-    flex-direction: row;
-    transition: transform 0.5s ease-in-out;
-    align-items: stretch; 
-}
-.work_list_inner li:nth-child(2n){
-    margin-top:3.5vw;
-}
-
-.work_list_inner li{
-    align-self:flex-start;
-    list-style: none;
-    align-items: stretch; 
-    /*margin*/
-}
-
-.wc_1, .wc_2{
-    position: relative;
-    transition: 0.5s ease-in-out ;
-}
-.wc_1::after{
-    content: '';
-    background-image: url(project_img/trying2.png);
+/*margin-letrying1.png);
     background-repeat: no-repeat;
     background-size:contain;
     content: '';
