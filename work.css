@@ -330,7 +330,7 @@ justify-content: center;
 }
 .wc_1::after{
     content: '';
-    background-image: url(project_img/trying1.png);
+    background-image: url(project_img/trying2.png);
     background-repeat: no-repeat;
     background-size:contain;
     content: '';
